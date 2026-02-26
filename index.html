@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de Heroes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="nav-logo">
+                    <div class="logo-box">H</div>
+                    <span>CDH</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#seccion-creacion"><i class="fas fa-layer-group"></i> Crear</a></li>
+                    <li><a href="#seccion-lista"><i class="fas fa-th-large"></i> Galería</a></li>
+                    <li><a href="#seccion-api"><i class="fas fa-globe"></i> Multiverso</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="main-header">
+        <div class="header-decoration"></div>
+        <h1>Construye tu Leyenda</h1>
+        <p>Transforma tus ideas en campeones. Crea, edita y expande tu propio multiverso.</p>
+    </header>
+
+    <main class="contenedor-principal">
+        
+        <section id="seccion-creacion" class="modulo-blanco">
+            <div class="modulo-header">
+                <h2><i class="fas fa-sliders-h"></i> Propiedades del Héroe</h2>
+            </div>
+            <form id="formHeroe">
+                <div class="grupo-input">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Nombre del héroe" required>
+                </div>
+
+                <div class="form-row" style="display:flex; gap:15px;">
+                    <div class="grupo-input" style="flex:2;">
+                        <label for="tipo">Clase</label>
+                        <select id="tipo">
+                            <option value="Guerrero">Guerrero</option>
+                            <option value="Mago">Mago</option>
+                            <option value="Arquero">Arquero</option>
+                            <option value="Asesino">Asesino</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo-input" style="flex:1;">
+                        <label for="nivel">Nivel</label>
+                        <input type="number" id="nivel" value="1" min="1" required>
+                    </div>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="habilidad">Habilidad</label>
+                    <input type="text" id="habilidad" placeholder="Ej: Rayo Gamma">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="imagen">URL de Imagen</label>
+                    <input type="url" id="imagen" placeholder="https://ejemplo.com/imagen.jpg">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="descripcion">Descripción</label>
+                    <textarea id="descripcion" rows="3" placeholder="Aquí va el texto del héroe..."></textarea>
+                </div>
+
+                <button type="submit" id="btnCrear">Generar Héroe</button>
+            </form>
+        </section>
+
+        <section id="seccion-lista">
+            <h2 class="section-title">Personajes Creados</h2>
+            <div id="listaHeroes" class="grilla-adobe"></div>
+        </section>
+
+        <section id="seccion-api">
+            <h2 class="section-title">Sugerencias del Multiverso</h2>
+            <div id="apiPersonajes" class="grilla-adobe"></div>
+        </section>
+
+    </main>
+
+    <footer class="footer-adobe">
+        <p>Trabajo Practico Integrador | Laboratorio de Programación</p>
+        <span>© 2026 Creador de Heroes por La Chavaleria</span>
+    </footer>
+
+    <script src="tpheroes.js"></script>
+</body>
+</html>
